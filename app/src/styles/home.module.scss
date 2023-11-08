@@ -1,16 +1,26 @@
 // Mixins
-@mixin mobilePadding {
-    padding: 3rem 2rem;
+@mixin padding {
+    padding: 2rem;
+
+    @media(min-width:768px) {
+        padding: 6rem;
+    }
+
+    // @media(min-width: 1024px) {
+    //     padding: 8rem;
+    // }
 }
 
-@mixin tabletPadding {
-    padding: 6rem;
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 // Home component - parent container
 .container {
     color: white;
-
 
     h1 {
         font-size: clamp(40px, 8vw, 100px);
@@ -26,13 +36,14 @@
 
     h3 {
         color: #F67E7E;
+        font-weight: bold;
         margin-bottom: 0.5rem;
     }
 }
 
 // Talent component - child container
 .talent {
-    @include mobilePadding();
+    @include padding();
     background-color: #014E56;
     text-align: center;
 
@@ -40,15 +51,9 @@
         color: #F67E7E;
     }
 
-    @media(min-width: 768px) {
-        @include tabletPadding();
-    }
-
     @media(min-width: 1024px) {
-        display: flex;
-        align-items: center;
+        @include flexCenter();
         text-align: start;
-        gap: 2rem;
 
         p {
             flex-shrink: 2;
@@ -58,30 +63,64 @@
 
 // Build component - child container
 .build {
-    @include mobilePadding();
+    @include padding();
     background-color: #012F34;
-
-    @media(min-width:768px) {
-        @include tabletPadding();
-    }
 
     @media(min-width: 1024px) {
         display: flex;
-        gap: 2rem;
+        justify-content: space-between;
+    }
+
+
+    .buildcontent {
+        @include flexCenter();
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @media(min-width: 1024px) {
+            flex-direction: row;
+            text-align: start;
+            gap: 1rem;
+        }
     }
 }
 
-.buildcontent {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
+// Success component - child container
+.success {
+    @include padding();
+    background-color: #004047;
 
-    @media(min-width: 1024px) {
-        flex-direction: row;
-        text-align: start;
-        gap: 1rem;
+    .avatars {
+        @include flexCenter();
+        flex-direction: column;
+
+        @media(min-width: 1024px) {
+            flex-direction: row;
+        }
+    }
+
+    .avatar {
+        padding: 1.5rem;
+        text-align: center;
+        background-image: url('../assets/icon-quotes.svg');
+        background-repeat: no-repeat;
+        background-position: top;
+
+        p {
+            font-size: 15px;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #79C8C7;
+        }
+
+        img {
+            width: 20%;
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-inline: auto;
+        }
     }
 }
