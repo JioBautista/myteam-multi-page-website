@@ -1,0 +1,87 @@
+// Mixins
+@mixin mobilePadding {
+    padding: 3rem 2rem;
+}
+
+@mixin tabletPadding {
+    padding: 6rem;
+}
+
+// Home component - parent container
+.container {
+    color: white;
+
+
+    h1 {
+        font-size: clamp(40px, 8vw, 100px);
+        margin-bottom: 1rem;
+        line-height: 1;
+    }
+
+    h2 {
+        font-size: clamp(32px, 5vw, 48px);
+        margin-bottom: 3rem;
+        line-height: 1;
+    }
+
+    h3 {
+        color: #F67E7E;
+        margin-bottom: 0.5rem;
+    }
+}
+
+// Talent component - child container
+.talent {
+    @include mobilePadding();
+    background-color: #014E56;
+    text-align: center;
+
+    span {
+        color: #F67E7E;
+    }
+
+    @media(min-width: 768px) {
+        @include tabletPadding();
+    }
+
+    @media(min-width: 1024px) {
+        display: flex;
+        align-items: center;
+        text-align: start;
+        gap: 2rem;
+
+        p {
+            flex-shrink: 2;
+        }
+    }
+}
+
+// Build component - child container
+.build {
+    @include mobilePadding();
+    background-color: #012F34;
+
+    @media(min-width:768px) {
+        @include tabletPadding();
+    }
+
+    @media(min-width: 1024px) {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.buildcontent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @media(min-width: 1024px) {
+        flex-direction: row;
+        text-align: start;
+        gap: 1rem;
+    }
+}
