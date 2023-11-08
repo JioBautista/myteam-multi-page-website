@@ -99,7 +99,6 @@
             flex-direction: row;
         }
     }
-
     .avatar {
         padding: 1.5rem;
         text-align: center;
@@ -122,5 +121,24 @@
             border-radius: 50%;
             margin-inline: auto;
         }
+    }
+}
+// Ready component - NOTE: LOCATED INSIDE LAYOUT COMPONENT
+.ready {
+    position: relative;
+    @include padding();
+    background-color: #F67E7E;
+    @include flexCenter();
+    flex-direction: column;
+
+    h2 {
+        margin-bottom: 0;
+        color: #012F34;
+        font-size: clamp(32px, 5vw, 48px);
+    }
+    
+    @media(min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }

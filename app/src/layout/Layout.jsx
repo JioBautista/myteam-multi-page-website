@@ -1,5 +1,7 @@
 import React from "react";
 import NavBar from "../navbar/NavBar";
+import Ready from "../pages/home/Ready";
+import Footer from "../footer/Footer";
 import { Outlet } from "react-router-dom";
 
 function Layout() {
@@ -7,6 +9,8 @@ function Layout() {
     <>
       <NavBar />
       <Outlet />
+      <Ready />
+      <Footer />
     </>
   );
 }
