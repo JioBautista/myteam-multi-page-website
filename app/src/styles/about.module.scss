@@ -95,3 +95,9 @@
         }
     }
 }
+
+// Clients component - child container
+.clients {
+    @include padding();
+    background-color: #012F34;
+}
