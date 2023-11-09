@@ -1,13 +1,13 @@
 // Mixins
 @mixin padding {
-    padding: 2rem;
+    padding:  4rem 2rem;
 
     @media(min-width:768px) {
         padding: 3rem;
     }
 
     @media(min-width: 1024px) {
-        padding: 6rem;
+        padding: 8rem;
     }
 }
 
@@ -30,8 +30,8 @@
     }
 
     h2 {
-        font-size: clamp(32px, 5vw, 48px);
-        margin-bottom: 3rem;
+        font-size: clamp(40px, 5vw, 64px);
+        margin-bottom: 2rem;
         line-height: 1;
     }
 
@@ -39,6 +39,9 @@
         color: #F67E7E;
         font-weight: bold;
         margin-bottom: 0.5rem;
+    }
+    p {
+        max-width: 80ch;
     }
 }
 
@@ -51,9 +54,10 @@
     @media(min-width: 1024px) {
         @include flexCenter();
         text-align: start;
+        justify-content: space-evenly;
 
-        p {
-            flex-shrink: 2;
+        h2 {
+            margin-bottom: 0;
         }
     }
 }
@@ -62,6 +66,10 @@
 .director {
     @include padding();
     background-color: #004047;
+
+    h2 {
+        margin-bottom: 4rem;
+    }
 
     .avatars {
         @include flexCenter();
@@ -100,4 +108,24 @@
 .clients {
     @include padding();
     background-color: #012F34;
+
+
+    .icons {
+        @include flexCenter();
+        flex-direction: column;
+        gap: 4rem;
+
+        img {
+            width: 50%;
+        }
+
+        @media(min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            img {
+                width: 15%;
+            }
+        }
+    }
 }

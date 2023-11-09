@@ -4,7 +4,7 @@ import styles from "../../styles/about.module.scss";
 function Overview() {
   return (
     <div className={styles.overview}>
-      <h2>About</h2>
+      <h2 className={styles.item1}>About</h2>
       <p>
         We help companies build dynamic teams made up of top global talent.
         Using our network of passionate professionals we drive innovation and
