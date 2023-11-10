@@ -8,3 +8,10 @@
     border: 3px solid #012F34;
     background-color: transparent;
 }
+// Wrapper component
+.wrapper {
+    width: 100%;
+    max-width: 1170px;
+    margin-inline: auto;
+    padding: 0 2rem;
+}
