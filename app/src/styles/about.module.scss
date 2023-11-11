@@ -1,21 +1,40 @@
 // Mixins
 @mixin padding {
-    padding:  4rem 2rem;
+    padding: 2.5rem 2rem;
 
     @media(min-width:768px) {
-        padding: 3rem;
+        padding: 4rem 2rem;
     }
 
     @media(min-width: 1024px) {
-        padding: 8rem;
+        padding: 6rem 2rem;
     }
 }
 
 @mixin flexCenter {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+}
+
+// Wrapper div
+.wrapper {
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+// Content div
+.content {
+    @include padding();
+    @include flexCenter();
+
+    @media(min-width:1024px) {
+        text-align: start;
+        flex-direction: row;
+        gap: 4rem;
+    }
 }
 
 // About component - Parent container
@@ -40,6 +59,7 @@
         font-weight: bold;
         margin-bottom: 0.5rem;
     }
+
     p {
         max-width: 80ch;
     }
@@ -47,46 +67,38 @@
 
 // Overview component - child container
 .overview {
-    @include padding();
     background-color: #014E56;
     text-align: center;
-
-    @media(min-width: 1024px) {
-        @include flexCenter();
-        text-align: start;
-        justify-content: space-evenly;
-
-        h2 {
-            margin-bottom: 0;
-        }
-    }
 }
 
 // Director component - child container
 .director {
-    @include padding();
     background-color: #004047;
 
-    h2 {
-        margin-bottom: 4rem;
+    .content {
+        flex-direction: column;
+        text-align: center;
     }
 
     .avatars {
         @include flexCenter();
-        flex-wrap: wrap;
         gap: 3rem;
+
+        @media(min-width:1024px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
 
     .avatar {
         position: relative;
-        padding: 3rem;
+        padding: 2rem;
         background-color: #012F34;
-        max-width: 350px;
 
         img {
             margin-inline: auto;
             margin-bottom: 1rem;
-            width: 60%;
+            width: 50%;
             border-radius: 50%;
             border: 3px solid white;
         }
@@ -106,13 +118,15 @@
 
 // Clients component - child container
 .clients {
-    @include padding();
     background-color: #012F34;
+
+    .content {
+        flex-direction: column;
+    }
 
 
     .icons {
         @include flexCenter();
-        flex-direction: column;
         gap: 4rem;
 
         img {
@@ -122,6 +136,7 @@
         @media(min-width: 768px) {
             flex-direction: row;
             flex-wrap: wrap;
+            gap: 2rem;
 
             img {
                 width: 15%;

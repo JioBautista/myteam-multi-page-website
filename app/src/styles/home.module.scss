@@ -32,6 +32,7 @@
 
     @media(min-width:1024px) {
         flex-direction: row;
+        text-align: left;
     }
 }
 
@@ -76,12 +77,20 @@
     .buildcontent {
         @include flexCenter();
         margin-bottom: 2rem;
+        
+        @media(min-width:1024px) {
+            flex-direction: row;
+        }
     }
 }
 
 // Success component - child container
 .success {
     background-color: #004047;
+
+    .content {
+        flex-direction: column;
+    }
 
     .avatars {
         @include flexCenter();
@@ -121,6 +130,10 @@
 .ready {
     position: relative;
     background-color: #F67E7E;
+
+    .content {
+        justify-content: center;
+    }
 
     h2 {
         margin-bottom: 0;
