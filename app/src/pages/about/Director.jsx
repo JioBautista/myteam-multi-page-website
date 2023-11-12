@@ -13,13 +13,14 @@ function Director() {
               return (
                 <>
                   <div className={styles.avatar}>
-                    <img src={items.avatar} />
+                    <div className={styles.userImg}>
+                      <img src={items.avatar} />
+                    </div>
                     <h3>{items.name}</h3>
                     <p>{items.title}</p>
-                    <img
-                      src="src/assets/icon-cross.svg"
-                      className={styles.cross}
-                    />
+                    <div className={styles.cross}>
+                      <img src="src/assets/icon-cross.svg" />
+                    </div>
                   </div>
                 </>
               );
