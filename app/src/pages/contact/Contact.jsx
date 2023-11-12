@@ -1,5 +1,6 @@
 import React from "react";
 import Ask from "./Ask";
+import Form from "./Form";
 import styles from "../../styles/contact.module.scss";
 
 function Contact() {
@@ -8,6 +9,7 @@ function Contact() {
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <Ask />
+          <Form />
         </div>
       </div>
     </div>

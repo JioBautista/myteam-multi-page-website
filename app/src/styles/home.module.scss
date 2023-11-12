@@ -40,30 +40,17 @@
 .container {
     color: white;
     text-align: center;
-
-    h1 {
-        font-size: clamp(40px, 8vw, 100px);
-        // margin-bottom: 0.25rem;
-        line-height: 1;
-    }
-
-    h2 {
-        font-size: clamp(32px, 5vw, 48px);
-        margin-bottom: 3rem;
-        line-height: 1;
-    }
-
-    h3 {
-        color: #F67E7E;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-    }
 }
 
 // Talent component - child container
 .talent {
     background-color: #014E56;
     text-align: center;
+
+    h1 {
+        font-size: clamp(40px, 5vw, 100px);
+        line-height: 1;
+    }
 
     span {
         color: #F67E7E;
@@ -74,10 +61,21 @@
 .build {
     background-color: #012F34;
 
+    h2 {
+        font-size: clamp(32px, 5vw, 40px);
+        line-height: 1;
+    }
+
+    h3 {
+        font-size: 18px;
+        color: #F67E7E;
+        margin-bottom: 0.5rem;
+    }
+
     .buildcontent {
         @include flexCenter();
         margin-bottom: 2rem;
-        
+
         @media(min-width:1024px) {
             flex-direction: row;
         }
@@ -90,6 +88,15 @@
 
     .content {
         flex-direction: column;
+
+        h2 {
+            font-size: clamp(32px, 5vw, 40px);
+            line-height: 1;
+            text-align: center;
+        }
+        span {
+            color: #79C8C7;
+        }
     }
 
     .avatars {
