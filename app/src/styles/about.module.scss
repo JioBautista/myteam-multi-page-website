@@ -1,14 +1,6 @@
 // Mixins
 @mixin padding {
-    padding: 2.5rem 2rem;
-
-    @media(min-width:768px) {
-        padding: 4rem 2rem;
-    }
-
-    @media(min-width: 1024px) {
-        padding: 6rem 2rem;
-    }
+    padding: 2rem;
 }
 
 @mixin flexCenter {
@@ -16,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 // Wrapper div
@@ -50,7 +42,7 @@
 
     h2 {
         font-size: clamp(40px, 5vw, 64px);
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         line-height: 1;
     }
 
