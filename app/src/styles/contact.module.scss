@@ -1,61 +1,69 @@
-// Mixins
-@mixin padding {
-    padding: 2rem;
+// Container div
+.container {
+    color: white;
+    text-align: center;
+    background-color: #014E56;
+    background-image: url('../assets/bg-pattern-contact-2.svg');
+    background-repeat: no-repeat;
+    background-position: bottom -100px right -100px;
 
     @media(min-width:768px) {
-        padding: 4rem 0;
+        background-image: 
+        url('../assets/bg-pattern-contact-2.svg'),
+        url('../assets/bg-pattern-about-2-contact-1.svg');
+        background-position: 
+        bottom right -100px,
+        top 25px left -100px;
     }
-
-    @media(min-width: 1024px) {
-        padding: 6rem 0;
-    }
-}
-
-@mixin flexCenter {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
 }
 
 // Wrapper div
 .wrapper {
     max-width: 80%;
     margin-inline: auto;
-}
+    padding-bottom: 6rem;
 
-// Content div
-.content {
-    @include padding();
-    @include flexCenter();
-
-    @media(min-width:1024px) {
-        flex-direction: row;
-        text-align: left;
+    @media(min-width:768px) {
+        padding-inline: 2rem;
+        padding-bottom: 6.5rem;
     }
 }
+
+// Ask Component
 .ask {
     h2 {
-        font-size: clamp(32px,5vw,48px);
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 32px;
+        font-weight: bold;
+        color: #F67E7E;
+        margin-bottom: 3rem;
+    }
+    @media(min-width:768px) {
+        h2 {
+            font-size: 64px;
+        }
     }
 }
-.container {
-    color: white;
-    text-align: center;
-    background-color: #014E56;
-}
+
+// icons located in Ask component
 .icons {
-    @include flexCenter();
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 1rem;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
     margin-bottom: 2rem;
+
+    p {
+        font-size: 18px;
+        font-weight: bold;
+    }
 }
 
 .form {
-    max-width: 540px;
-
     input,
     textarea {
         width: 100%;
@@ -64,5 +72,12 @@
         background-color: transparent;
         border: none;
         border-bottom: 1px solid white;
+    }
+    button {
+        font-size: 18px;
+        padding: 0.5rem 2rem;
+        border-radius: 2rem;
+        border: none;
+        margin-right: 100%;
     }
 }

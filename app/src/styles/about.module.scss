@@ -2,58 +2,71 @@
 .container {
     color: white;
     text-align: center;
-
-    h2 {
-        font-size: 40px;
-    }
-
-    @media(min-width:768px) {
-        h2 {
-            font-size: 64px;
-        }
-    }
 }
 
+// Wrapper div
 .wrapper {
-    max-width: 1170px;
+    max-width: 80%;
     margin-inline: auto;
-    padding-inline: 1rem;
+    padding: 0 0.5rem;
 }
 
 // Overview component
 .overview {
     background-color: #014E56;
+    background-image: url('../assets/bg-pattern-about-1-mobile-nav-1.svg');
+    background-repeat: no-repeat;
+    background-position: right -100px bottom -100px;
+
+    // MEDIA QUERIES
+    @media(min-width:768px) {
+        background-position: right -100px bottom;
+    }
 
     .content {
-        padding: 2rem 0;
-        
-        p {
-            width: 100%;
-            max-width: 730px;
+        padding-bottom: 8rem;
+
+        h2 {
+            font-size: 40px;
+            margin-bottom: 1rem;
         }
 
         @media(min-width:768px) {
-            padding: 4rem;
-        }
+            padding-inline: 3rem;
 
-        @media(min-width:1024px) {
-            display: flex;
-            align-items: center;
-            // justify-content: center;
-            gap: 3rem;
-            text-align: start;
+            h2 {
+                font-size: 64px;
+            }
         }
     }
+
 }
 
 // Director component
 .director {
     background-color: #004047;
+    background-image:
+        url('../assets/bg-pattern-about-2-contact-1.svg'),
+        url("../assets/bg-pattern-home-4-about-3.svg");
+    background-repeat: no-repeat;
+    background-position:
+        top -100px left -100px,
+        bottom right;
+
+    // MEDIA QUERIES
+    @media(min-width: 768px) {
+        background-position:
+            top left -100px,
+            bottom right;
+    }
 
     .content {
-        padding: 2rem 0;
+        padding-top: 5rem;
+        padding-bottom: 8rem;
+
         h2 {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
+            font-size: 32px;
         }
     }
 }
@@ -63,14 +76,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     gap: 3rem;
 
+    // Media QUERY
     @media(min-width:768px) {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 2rem;
+        gap: 0.5rem;
     }
 }
 
@@ -81,7 +94,21 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    padding: 2rem 1rem;
+    padding: 3rem 0.5rem;
+
+    h3 {
+        color: #79C8C7;
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+        font-style: italic;
+    }
+    // Media Query
+    @media(min-width: 768px) {
+        margin-bottom: 3rem;
+    }
 }
 
 // User image div
@@ -104,4 +131,46 @@
     background-color: #F67E7E;
     padding: 1rem;
     border-radius: 50%;
+}
+
+// Clients component
+.clients {
+    background-color: #012F34;
+    background-image: url('../assets/bg-pattern-about-4.svg');
+    background-repeat: no-repeat;
+    background-position: top -100px left -100px;
+
+    .content {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 2rem;
+        }
+    }
+    @media(min-width: 768px) {
+        background-position: top -100px left;
+    }
+}
+
+// Icons div located in Clients component
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    img {
+        width: 50%;
+    }
+    @media(min-width:768px) {
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        img {
+            width: 15%;
+        }
+    }
 }

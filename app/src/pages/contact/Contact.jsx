@@ -7,11 +7,9 @@ function Contact() {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.content}>
           <Ask />
           <Form />
         </div>
-      </div>
     </div>
   );
 }
