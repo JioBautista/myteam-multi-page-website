@@ -21,11 +21,10 @@ function Success() {
                     <p>{items.comment}</p>
                     <h3>{items.name}</h3>
                     <p>{items.title}</p>
-                    
-                    <div className={styles.userIcon}>
-                    <img src={items.avatar} />
-                    </div>
 
+                    <div className={styles.userIcon}>
+                      <img src={items.avatar} />
+                    </div>
                   </div>
                 </>
               );
