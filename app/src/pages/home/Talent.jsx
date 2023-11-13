@@ -15,6 +15,7 @@ function Talent() {
             talent. We're about to change that.
           </p>
         </div>
+        <img src="src/assets/bg-pattern-home-2.svg"/>
       </div>
     </div>
   );

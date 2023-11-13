@@ -5,6 +5,8 @@ import styles from "../../styles/home.module.scss";
 function Success() {
   return (
     <div className={styles.success}>
+      <img src="src/assets/bg-pattern-home-4-about-3.svg" />
+
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <h2>
@@ -19,7 +21,11 @@ function Success() {
                     <p>{items.comment}</p>
                     <h3>{items.name}</h3>
                     <p>{items.title}</p>
+                    
+                    <div className={styles.userIcon}>
                     <img src={items.avatar} />
+                    </div>
+
                   </div>
                 </>
               );
@@ -27,6 +33,8 @@ function Success() {
           </div>
         </div>
       </div>
+
+      <img src="src/assets/bg-pattern-home-5.svg" />
     </div>
   );
 }

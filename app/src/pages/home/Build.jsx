@@ -8,6 +8,7 @@ function Build() {
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <h2>Build & manage distributed teams like no one else.</h2>
+
           <div>
             {data.map((items) => {
               return (

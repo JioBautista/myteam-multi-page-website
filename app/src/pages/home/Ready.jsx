@@ -5,6 +5,7 @@ import styles from "../../styles/home.module.scss";
 function Ready() {
   return (
     <div className={styles.ready}>
+
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <h2>Ready to get started?</h2>
