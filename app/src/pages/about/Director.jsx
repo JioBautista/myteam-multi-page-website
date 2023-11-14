@@ -4,16 +4,18 @@ import data from "../../data/directors-data";
 
 function Director() {
   const [isActive, setIsActive] = React.useState(false);
+
   const handleClick = () => {
     setIsActive(!isActive);
   };
+
   return (
     <div className={styles.director}>
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <h2>Meet the directors</h2>
           <div className={styles.avatars}>
-            {data.map((items) => {
+            {data.map((items, index) => {
               return (
                 <React.Fragment key={items.id}>
                   <div className={styles.avatar}>
