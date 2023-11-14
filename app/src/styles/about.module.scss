@@ -146,6 +146,7 @@
 
 // Cross icon div
 .cross {
+    cursor: pointer;
     position: absolute;
     top: 100%;
     left: 50%;
@@ -153,6 +154,10 @@
     background-color: #F67E7E;
     padding: 1rem;
     border-radius: 50%;
+
+    &:hover {
+        background-color: #79C8C7;
+    }
 }
 
 // Clients component

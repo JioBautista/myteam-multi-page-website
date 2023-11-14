@@ -24,8 +24,10 @@
     gap: 2rem;
 
     @media (min-width:768px) {
-        flex-direction: row;
-        text-align: start;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        text-align: end;
     }
 
     .myteam {
@@ -54,12 +56,14 @@
     }
 
     .icons {
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 3rem;
+        justify-content: space-around;
+        justify-self: start;
 
         path {
+            width: 100%;
             cursor: pointer;
             &:hover {
                 fill: #F67E7E;
