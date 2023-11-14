@@ -6,7 +6,7 @@
 
 // Wrapper div
 .wrapper {
-    max-width: 80%;
+    max-width: 1300px;
     margin-inline: auto;
     padding: 0 0.5rem;
 }
@@ -24,7 +24,12 @@
     }
 
     .content {
-        padding-bottom: 8rem;
+        padding-bottom: 6rem;
+
+        p {
+            max-width: 65ch;
+            margin-inline: auto;
+        }
 
         h2 {
             font-size: 40px;
@@ -32,11 +37,19 @@
         }
 
         @media(min-width:768px) {
-            padding-inline: 3rem;
+            padding-inline: 8rem;
 
             h2 {
                 font-size: 64px;
             }
+        }
+
+        @media(min-width: 1024px) {
+            text-align: start;
+            padding: 6rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
     }
 
@@ -68,11 +81,19 @@
             margin-bottom: 2rem;
             font-size: 32px;
         }
+
+        @media(min-width: 1024px) {
+            h2 {
+                font-size: 48px;
+            }
+        }
     }
 }
 
 // Avatars div - found in Director component
 .avatars {
+    max-width: 900px;
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,7 +104,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 2rem;
     }
 }
 
@@ -105,6 +126,7 @@
         font-size: 15px;
         font-style: italic;
     }
+
     // Media Query
     @media(min-width: 768px) {
         margin-bottom: 3rem;
@@ -140,6 +162,10 @@
     background-repeat: no-repeat;
     background-position: top -100px left -100px;
 
+    @media(min-width: 768px) {
+        background-position: top -100px left;
+    }
+
     .content {
         padding-top: 5rem;
         padding-bottom: 5rem;
@@ -148,9 +174,12 @@
             font-size: 32px;
             margin-bottom: 2rem;
         }
-    }
-    @media(min-width: 768px) {
-        background-position: top -100px left;
+
+        @media(min-width: 1024px) {
+            h2 {
+                font-size: 48px;
+            }
+        }
     }
 }
 
@@ -164,6 +193,7 @@
     img {
         width: 50%;
     }
+
     @media(min-width:768px) {
         flex-direction: row;
         justify-content: space-between;

@@ -6,7 +6,7 @@
 
 // Wrapper div
 .wrapper {
-    max-width: 1170px;
+    max-width: 1300px;
     margin-inline: auto;
     padding: 0 0.5rem;
 }
@@ -91,6 +91,7 @@
 
     h2 {
         font-size: 32px;
+        max-width: 15ch;
         line-height: 1;
         margin-top: 3rem;
         margin-bottom: 3rem;
@@ -103,24 +104,23 @@
         color: #F67E7E;
         margin-bottom: 0.5rem;
     }
-    @media(min-width: 768px) {
-        h2 {
-            width: 90%;
-        }
-    }
+
     @media(min-width: 1024px) {
         h2 {
-            width: 25ch;
+            // width: 25ch;
             font-size: 48px;
         }
+
         background-image: none;
     }
+
     .content {
         padding: 2rem 0.5rem;
 
         @media(min-width:768px) {
-            padding: 4rem 1rem;
+            padding: 4rem;
         }
+
         @media(min-width:1024px) {
             display: flex;
             gap: 2rem;
@@ -135,6 +135,9 @@
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 2rem;
+    p {
+        max-width: 48ch;
+    }
 
     @media(min-width:768px) {
         text-align: start;
@@ -168,45 +171,56 @@
         span {
             color: #79C8C7;
         }
-    }
 
-    // Avatars container - Flex
-    .avatars {
-        @include flex();
-        flex-direction: column;
-        // gap: 0.5rem;
-    }
-
-    // Child elements of Avatars
-    .avatar {
-        padding: 1.5rem;
-        background-image: url('../assets/icon-quotes.svg');
-        background-repeat: no-repeat;
-        background-position: top;
-
-        p {
-            font-size: 15px;
-            margin-bottom: 1rem;
-        }
-
-        h3 {
-            color: #79C8C7;
+        @media(min-width: 665px) {
+            h2 {
+                width: 30ch;
+                margin-inline: auto;
+            }
         }
     }
+}
 
-    // Icon div located in avatar div
-    .userIcon {
-        width: 30%;
-        margin-inline: auto;
+// Avatars container - Flex
+.avatars {
+    @include flex();
+    flex-direction: column;
+    // gap: 0.5rem;
+    @media(min-width:1024px) {
+        flex-direction: row;
+    }
+}
 
-        img {
-            border: 2px solid white;
-            border-radius: 50%;
-        }
+// Child elements of Avatars
+.avatar {
+    padding: 1.5rem;
+    background-image: url('../assets/icon-quotes.svg');
+    background-repeat: no-repeat;
+    background-position: top;
 
-        @media(min-width:768px) {
-            width: 15%;
-        }
+    p {
+        font-size: 15px;
+        max-width: 60ch;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        color: #79C8C7;
+    }
+}
+
+// Icon div located in avatar div
+.userIcon {
+    width: 20%;
+    margin-inline: auto;
+
+    img {
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+    @media(min-width:768px) {
+        width: 15%;
     }
 }
 
@@ -216,6 +230,28 @@
     background-image: url('../assets/bg-pattern-home-6-about-5.svg');
     background-repeat: no-repeat;
     background-position: left bottom -23px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 0;
+        color: #012F34;
+        font-size: 32px;
+        line-height: 1;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        border: 3px solid black;
+        padding: 0.5rem 2rem;
+        border-radius: 2rem;
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
 
     .content {
         padding: 5rem 2rem;
@@ -227,24 +263,11 @@
             flex-direction: row;
             justify-content: space-evenly;
         }
-    }
-
-    h2 {
-        text-align: center;
-        margin-bottom: 0;
-        color: #012F34;
-        font-size: 32px;
-        line-height: 1;
-    }
-
-    button {
-        border: 3px solid black;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-        font-size: 18px;
-        font-weight: bold;
+        @media(min-width:1024px) {
+            h2 {
+                font-size: 48px;
+                font-weight: bold;
+            }
+        }
     }
 }

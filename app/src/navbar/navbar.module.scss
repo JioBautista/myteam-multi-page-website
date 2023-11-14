@@ -2,11 +2,13 @@
 .container {
     background-color: #014E56;
 }
+
 // Wrapper div
 .wrapper {
-    max-width: 1170px;
+    max-width: 1440px;
     margin-inline: auto;
 }
+
 .content {
     position: relative;
     display: flex;
@@ -17,46 +19,64 @@
     @media(min-width: 1024px) {
         padding: 2rem 6rem;
     }
+
     img {
         cursor: pointer;
     }
+
     a {
         color: white;
         text-decoration: none;
         font-size: 18px;
         font-weight: bold;
     }
-    button {
-        border: 2px solid white;
-        color: white;
+
+    a:nth-child(2),
+    a:nth-child(3) {
+        &:hover {
+            color: #F67E7E;
+        }
     }
+
     .navlink {
         display: none;
     }
+
     .navbtn {
         cursor: pointer;
         background-color: transparent;
+        border: 2px solid white;
         padding: 0.5rem 2rem;
         border-radius: 2rem;
-        font-size: 18px;
-        font-weight: bold;
         display: none;
+        &:hover {
+            background-color: white;
+            color: black;
+        }
     }
+
     @media(min-width:768px) {
         justify-content: flex-start;
         gap: 3rem;
+
         img:nth-child(5) {
             display: none;
         }
+
         .navlink,
         .navbtn {
             display: block;
         }
-        button {
+        .navbtn {
             margin-left: auto;
         }
     }
 }
+.navbtn.display {
+    display: block;
+    margin-left: 0;
+}
+
 // Sidebar styles
 .sidebar {
     background-image: url("../assets/bg-pattern-about-1-mobile-nav-1.svg");

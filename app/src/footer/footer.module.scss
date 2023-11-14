@@ -27,8 +27,8 @@
         flex-direction: row;
         text-align: start;
     }
+
     .myteam {
-        color: white;
         display: grid;
         grid-template-columns: auto auto;
         grid-template-areas:
@@ -37,6 +37,16 @@
         align-items: center;
         justify-items: center;
         gap: 0.50rem;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+                color: #F67E7E;
+            }
+        }
 
         img {
             grid-area: img;
@@ -47,6 +57,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        gap: 3rem;
+
+        path {
+            cursor: pointer;
+            &:hover {
+                fill: #F67E7E;
+            }
+        }
     }
 }
