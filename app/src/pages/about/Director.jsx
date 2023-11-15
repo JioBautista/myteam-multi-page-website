@@ -20,7 +20,7 @@ function Director() {
                     </div>
                     <h3>{items.name}</h3>
                     <p>{items.title}</p>
-                    <CrossButton  name={items.name}/>
+                    <CrossButton  name={items.name} />
                   </div>
                 </React.Fragment>
               );
