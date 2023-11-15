@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-position: bottom -100px right -100px;
 
-    @media(min-width:768px) {
+    @media(min-width:1400px) {
         background-image: 
         url('../assets/bg-pattern-contact-2.svg'),
         url('../assets/bg-pattern-about-2-contact-1.svg');
@@ -21,10 +21,11 @@
 .wrapper {
     max-width: 1170px;
     margin-inline: auto;
+    padding-inline: 2rem;
     padding-bottom: 6rem;
 
     @media(min-width:768px) {
-        padding-inline: 2rem;
+        padding-inline: 3rem;
         padding-bottom: 6.5rem;
     }
     @media(min-width:1024px) {
