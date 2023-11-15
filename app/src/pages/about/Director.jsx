@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/about.module.scss";
+import CrossButton from "./CrossButton";
 import data from "../../data/directors-data";
 
 function Director() {
@@ -24,12 +25,7 @@ function Director() {
                     </div>
                     <h3>{items.name}</h3>
                     <p>{items.title}</p>
-                    <div
-                      className={`${styles.cross} ${isActive ? styles.active : ''}`}
-                      onClick={handleClick}
-                    >
-                      <img src="src/assets/icon-cross.svg" />
-                    </div>
+                    <CrossButton />
                   </div>
                 </React.Fragment>
               );
