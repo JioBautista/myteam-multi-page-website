@@ -4,11 +4,6 @@ import CrossButton from "./CrossButton";
 import data from "../../data/directors-data";
 
 function Director() {
-  const [isActive, setIsActive] = React.useState(false);
-
-  const handleClick = () => {
-    setIsActive(!isActive)
-  };
 
   return (
     <div className={styles.director}>
@@ -25,7 +20,7 @@ function Director() {
                     </div>
                     <h3>{items.name}</h3>
                     <p>{items.title}</p>
-                    <CrossButton />
+                    <CrossButton  name={items.name}/>
                   </div>
                 </React.Fragment>
               );

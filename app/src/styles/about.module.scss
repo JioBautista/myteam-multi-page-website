@@ -143,6 +143,33 @@
         border: 2px solid white;
     }
 }
+// Popup div located in Avatar div
+.popup {
+    background-color: #002529;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+// Icons div located in Avatar div
+.icon {
+    display: flex;
+    gap: 1rem;
+
+    svg {
+        cursor: pointer;
+    }
+    path {
+        &:hover {
+            fill: #F67E7E;
+        }
+    }
+}
 
 // Cross icon div
 .cross {
@@ -161,7 +188,10 @@
 }
 // Cross icon active state
 .cross.active {
-    background-color: blue;
+    img {
+        rotate: 45deg;
+        transition: rotate 0.5s;
+    }
 }
 
 // Clients component
