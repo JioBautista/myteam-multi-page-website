@@ -6,7 +6,7 @@ function Director() {
   const [isActive, setIsActive] = React.useState(false);
 
   const handleClick = () => {
-    setIsActive(!isActive);
+    setIsActive(!isActive)
   };
 
   return (
@@ -25,7 +25,7 @@ function Director() {
                     <h3>{items.name}</h3>
                     <p>{items.title}</p>
                     <div
-                      className={`${styles.cross} ${isActive && styles.active}`}
+                      className={`${styles.cross} ${isActive ? styles.active : ''}`}
                       onClick={handleClick}
                     >
                       <img src="src/assets/icon-cross.svg" />
