@@ -49,6 +49,10 @@
         color: #F67E7E;
         margin-bottom: 3rem;
     }
+    div {
+        max-width: 540px;
+        margin-inline: auto;
+    }
     @media(min-width:768px) {
         h2 {
             font-size: 64px;
@@ -72,10 +76,11 @@
 
 .form {
     max-width: 540px;
+    margin-inline: auto;
     input,
     textarea {
         width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         padding: 1.5rem;
         background-color: transparent;
         border: none;
@@ -84,6 +89,12 @@
         &::placeholder {
             color: #979797;
         }
+    }
+    input,select,textarea {
+        color: white;
+    }
+    input:focus {
+        color: white;
     }
     button {
         cursor: pointer;
@@ -97,4 +108,12 @@
             color: white;
         }
     }
+}
+span {
+    position: relative;
+    bottom: 25px;
+    color: #F67E7E;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
 }
